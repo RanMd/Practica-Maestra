@@ -1,0 +1,305 @@
+:root {
+    --bg-clr: #000;
+    --font-clr: #fff;
+    --hover-items: #141313;
+    --border-items: #6e69697a;
+    --border-container: #525151;
+    --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 100vw;
+    min-height: 100vh;
+    font-family: var(--font-family);
+    text-transform: uppercase;
+    background-color: var(--bg-clr);
+    color: var(--font-clr);
+    padding: 20px;
+}
+
+header, footer {
+    text-align: center;
+}
+
+header h1{
+    padding: 20px;
+    border-top: 5px solid;
+    margin: 0; 
+}
+
+main {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    padding: 0 50px 0 50px;
+}
+
+/*-------------------Estilos de los elementos-------------------*/
+
+main .contenido {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-flow: column wrap;
+}
+
+main .element {
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    user-select: none;
+}
+
+
+main .data .app {
+    padding: 25px;
+}
+
+main .menu{
+    transition: background-color .3s;
+    justify-content: space-between;
+    display: flex;
+    padding-right: 15px;
+}
+
+main .menu .icons-menu{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+main .menu > span:first-child {
+    border-left: 5px solid;
+    padding: 15px;
+}
+
+main .data .dataIcon {
+    margin-left: 15px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+main .data .Xicon {
+    cursor: initial;
+    opacity: 0;
+    transition: 1s;
+}
+
+footer p {
+    border-bottom: 5px solid;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.form-container .input{
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 1.2em;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    border: 3px solid var(--border-items);
+    border-radius: 5px;
+}
+
+.form-container .input::-webkit-outer-spin-button,
+.form-container .input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+.form-container .form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 5px solid var(--border-container);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.form-container .result {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    height: 82px;
+    border: 3px solid var(--border-items);
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+
+.form-container .submit,
+.otherButton {
+    transition: background-color .3s;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 15px;
+    background-color: transparent;
+    border: transparent;
+    color: var(--font-clr);
+}
+
+/* ------------------ESTADOS---------------- */
+
+.inactivo{
+    display: none;
+}
+
+main .data .activo {
+    cursor: pointer;
+    opacity: 1;
+}
+
+main .menu:hover{
+    background-color: var(--hover-items);
+}
+
+.submit:hover, 
+.otherButton:hover {
+    background-color: var(--hover-items);
+}
+ 
+/* ----------Proyecto 1----------------*/
+
+.form-container .resultComp{
+    font-size: 3em;
+}
+
+/* ------------------------------------*/
+/* ----------Proyecto 2----------------*/
+
+.form-container .formMedia,
+.form-container .formOr {
+   display: flex;
+   gap: 10px;
+}
+
+.form-container .resultMedia{
+    height: auto;
+    text-align: left;
+    font-size: 1.1em;
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+/* ------------------------------------*/
+/* ----------Proyecto 3----------------*/
+
+.form-container .formMult{
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.form-container .formMult .input {
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.form-container .resultMult {
+    display: initial;
+    text-align: left;
+    height: auto;
+}
+
+/* ------------------------------------*/
+/* ----------Proyecto 4----------------*/
+
+.form-container .formForm {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+}
+
+.form-container .resultForm {
+   height: auto;
+}
+
+/* ------------------------------------*/
+/* ----------Proyecto 5----------------*/
+
+.form-container .resultOr {
+    display: initial;
+    text-align: left;
+    height: auto;
+    line-height: 25px;
+}
+.formPerro::after {
+    content: "";
+    top: 0;
+    right: 0;
+    position: absolute;
+    background: url(./images/dios.png);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.05;
+}
+
+/* ------------------------------------*/
+/* ----------Proyecto 6----------------*/
+
+.calcBody {
+    width: 235px;
+    height: auto;
+    background-color: #120d1c;
+    border-radius: 5px;
+    padding: 20px;
+    gap: 20px;
+    display: grid;
+}
+
+.calcDisp {
+    color: var(--bg-clr);
+    width: 100%;
+    height: 40px;
+    background-color: var(--font-clr);
+    font-weight: bold;
+    text-align: right;
+    outline: none;
+    padding: 15px;
+    border-radius: 3px;
+    border: none;
+}
+
+.calcBodyGrid {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.calcBodyGrid button {
+    color: var(--font-clr);
+    background-color: #1f201d;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.4em;
+    margin: 0;
+    border: none;
+    border-radius: 2px;
+}
+
+.calcBodyGrid .zero {
+    grid-column: 1 / span 2;
+}
+
+.calcBodyGrid .equal {
+    grid-column: 4;
+    grid-row: 4 / span 2;
+}
+
+/* ------------------------------------*/
